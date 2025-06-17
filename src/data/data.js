@@ -10,18 +10,21 @@ import StepImage5 from "../assets/step_5.webp";
 
 export const CONCEPTS_DATA = [
   {
+    id: 1,
     image: InfiniteImage,
     title: "Forever Furniture",
     description:
       "Every collection reflects our commitment to durable designs, premium materials, and styles that stand the test of trends and time.",
   },
   {
+    id: 2,
     image: RecycledImage,
     title: "Consciously Crafted",
     description:
       "Our infinitely recyclable lumber is made from reusable plastics in a circular, 99% waste-free process. And in the future, your furniture can be recycled back to where it started.",
   },
   {
+    id: 3,
     image: UsaImage,
     title: "Made in the USA",
     description:
