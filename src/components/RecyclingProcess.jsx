@@ -1,6 +1,7 @@
  import { useState } from 'react';
  import { STEPS_DATA } from "../data/data.js";
  import { TabButton } from "./TabButton.jsx";
+ import Section from './Section.jsx';
 
 export default function RecyclingProcess() {
     function onSelect(stepNumber) {
@@ -9,45 +10,44 @@ export default function RecyclingProcess() {
      // use state (important)
     const [selectedStep, setSelectedStep] = useState(0);
     return (
-        <section id="examples">
-            <h2>Our Recycling Process</h2>
+        <Section title="Our Recycling Process" id="examples">
             <menu>
-            <TabButton
-                isSelected={selectedStep === 0}
-                onSelect={() => onSelect(0)}
-            >
-                Step 1
-            </TabButton>
-            <TabButton
-                isSelected={selectedStep === 1}
-                onSelect={() => onSelect(1)}
-            >
-                Step 2
-            </TabButton>
-            <TabButton
-                isSelected={selectedStep === 2}
-                onSelect={() => onSelect(2)}
-            >
-                Step 3
-            </TabButton>
-            <TabButton
-                isSelected={selectedStep === 3}
-                onSelect={() => onSelect(3)}
-            >
-                Step 4
-            </TabButton>
-            <TabButton
-                isSelected={selectedStep === 4}
-                onSelect={() => onSelect(4)}
-            >
-                Step 5
-            </TabButton>
+                <TabButton
+                    isSelected={selectedStep === 0}
+                    onSelect={() => onSelect(0)}
+                >
+                    Step 1
+                </TabButton>
+                <TabButton
+                    isSelected={selectedStep === 1}
+                    onSelect={() => onSelect(1)}
+                >
+                    Step 2
+                </TabButton>
+                <TabButton
+                    isSelected={selectedStep === 2}
+                    onSelect={() => onSelect(2)}
+                >
+                    Step 3
+                </TabButton>
+                <TabButton
+                    isSelected={selectedStep === 3}
+                    onSelect={() => onSelect(3)}
+                >
+                    Step 4
+                </TabButton>
+                <TabButton
+                    isSelected={selectedStep === 4}
+                    onSelect={() => onSelect(4)}
+                >
+                    Step 5
+                </TabButton>
             </menu>
             <div id="tab-content">
-            <img src={STEPS_DATA[selectedStep].image} alt="" />
-            <h3>{STEPS_DATA[selectedStep].title}</h3>
-            <p>{STEPS_DATA[selectedStep].description}</p>
+                <img src={STEPS_DATA[selectedStep].image} alt="" />
+                <h3>{STEPS_DATA[selectedStep].title}</h3>
+                <p>{STEPS_DATA[selectedStep].description}</p>
             </div>
-      </section>
+      </Section>
     );
 }
