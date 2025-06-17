@@ -1,14 +1,13 @@
+ import { useState } from 'react';
  import { STEPS_DATA } from "../data/data.js";
  import { TabButton } from "./TabButton.jsx";
- 
- // use state (important)
-const [selectedStep, setSelectedStep] = useState(0);
-
-function onSelect(stepNumber) {
-    setSelectedStep(stepNumber);
-}
 
 export default function RecyclingProcess() {
+    function onSelect(stepNumber) {
+        setSelectedStep(stepNumber);
+    }
+     // use state (important)
+    const [selectedStep, setSelectedStep] = useState(0);
     return (
         <section id="examples">
             <h2>Our Recycling Process</h2>

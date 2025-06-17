@@ -1,4 +1,4 @@
-import polywoodLogo from '../../assets/polywood_logo.avif';
+import polywoodLogo from '../assets/polywood_logo.avif';
 
 export function Header() {
   return (
